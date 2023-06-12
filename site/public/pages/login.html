@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-brazil">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENTRAR</title>
+    <link rel="icon" href="../assets/img/coroa.jpeg">
+    <link rel="stylesheet" href="../css/login.css">
+
+</head>
+
+<body>
+    <header>
+
+        <!-- <div class="botoes">
+            <a href="login.html">LOGIN</a> -->
+
+        <!-- <a href="cadastro.html">CADASTRAR</a> -->
+        <!-- </div> -->
+        <nav>
+            <!-- <div class="inicio-cabeçalho"> -->
+
+            <!-- CRIANDO A NAVBAR -->
+            <a href="../index.html">HOME</a>
+            <a href="../pages/make.html">MAKE</a>
+            <a href="../pages/skincare.html">SKINCARE</a>
+            <a href="../pages/inspirações.html">INSPIRAÇÕES</a>
+            <!-- <a href="../pages/pesquisa.html">SIMULE AQUI</a> -->
+            <!-- <a href="estilo.html">DASHBOARD</a> -->
+
+
+
+
+            <!-- CRIANDO OS BOTÕES -->
+
+            <!-- </div> -->
+        </nav>
+
+        <div class="botoes">
+            <a href="../pages/login.html">ENTRAR</a>
+
+            <a href="../pages/cadastro.html">CADASTRAR</a>
+        </div>
+
+    </header>
+
+    <main class="login">
+        <div class="conteiner">
+
+            <h1>Login</h1><BR><BR>
+            <input type="text" placeholder="email" id="email_input"><BR><BR>
+            <input type="password" placeholder="senha" id="senha_input"><BR><BR>
+            <button onclick="entrar()"> ENVIAR </button><br><br><BR><BR>
+
+            <!-- <a href="cadastro.html" onclick="">Não tem uma conta </a> -->
+
+        </div>
+
+    </main>
+</body>
+
+
+
+
+</html>
+
+<script>
+
+    function entrar() {
+        // aguardar();
+
+        var email = email_input;
+        var senha = senha_input;
+
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+
+        var check = false;
+
+        // if (emailVar || " " || senhaVar == " ") {
+
+        //     alert("Preencha todos os campos vazios")
+        // }
+
+        // validando email
+
+        if (emailVar == "") {
+            email.className = "error " + email.className
+            email.className = email.className.replaceAll("valid ", " ")
+            check = false;
+
+        } else {
+            email.className = email.className.replaceAll("error ", " ")
+            email.className = "valid " + email.className
+
+            check = true;
+        }
+
+        // validando senha 
+
+        if (senhaVar == "") {
+            senha.className = "error " + senha.className
+            senha.className = senha.className.replaceAll("valid ", " ")
+            check = false;
+
+        } else {
+            senha.className = senha.className.replaceAll("error ", " ")
+            senha.className = "valid " + senha.className
+
+            check = true;
+        }
+
+        // console.log("FORM LOGIN: ", emailVar);
+        // console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                // Swal.fire({
+                //     position: 'center',
+                //     icon: 'success',
+                //     title: 'Login realizado com sucesso',
+                //     showConfirmButton: false,
+                //     timer: 2000
+                // })
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
+
+                    setTimeout(function () {
+                        window.location = "interacoes.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    // finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+
+    }
+
+
+
+
+
+</script>

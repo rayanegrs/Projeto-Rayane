@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interações</title>
+    <link rel="icon" href="assets/img/coroa.jpeg">
+    <link rel="stylesheet" href="../css/interacoes.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <!-- <div class="inicio-cabeçalho"> -->
+
+            <!-- CRIANDO A NAVBAR -->
+            <a href="../index.html">HOME</a>
+            <a href="../pages/make.html">MAKE</a>
+            <a href="../pages/skincare.html">SKINCARE</a>
+            <a href="../pages/inspirações.html">INSPIRAÇÕES</a>
+            <!-- <a href="../pages/pesquisa.html">SIMULE AQUI</a> -->
+            <!-- <a href="estilo.html">DASHBOARD</a> -->
+
+
+
+
+            <!-- CRIANDO OS BOTÕES -->
+
+            <!-- </div> -->
+        </nav>
+
+        <div class="botoes">
+            <a href="../pages/login.html">LOGOUT</a>
+        </div>
+    </header>
+
+    <div class="escolha">
+        <p class="destaque-titulo">Divirta-se</p>
+
+    </div>
+
+    <div class="imgInicial">
+
+
+
+
+        <a onclick="cruzadinha()" title="Divirta-se" target="_blank">
+            <img class="cruzadinha" src="../assets/img/cruzadinha.png">
+            <h4>CRUZADINHA</h4>
+        </a>
+
+        <a onclick="pesquisa()" title="Veja a porcentagem da sua frequência " target="_blank">
+            <img class="simule" src="../assets/img/simulador.png">
+            <h4>SIMULE AQUI</h4>
+        </a>
+    </div>
+    <!-- 
+    <footer class="rodape">
+        
+        <a href="https://www.instagram.com/ray.grs/" title="Instagram" target="_blank">
+            
+            <img src="" alt="Instagram">
+        </a>
+
+        <a href="https://github.com/rayanegrs/Projeto-individual.git" title="GITHUB" target="_blank">
+            <img src="" alt="Git hub">
+        </a>
+
+
+    </footer> -->
+
+</body>
+
+</html>
+
+<script>
+
+    var fk = sessionStorage.ID_USUARIO
+    console.log(fk)
+
+    function pesquisa() {
+        window.location = 'pesquisa.html'
+    }
+    function cruzadinha() {
+        window.location = 'cruzadinha.html'
+    }
+</script>

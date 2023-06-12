@@ -1,0 +1,58 @@
+body {
+    background-color: #000;
+    color: blueviolet;
+    overflow-x: hidden;
+  }
+  
+  H1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3%;
+    padding: 2%;
+  }
+  
+  p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3%;
+    padding: 2%;
+    color: aliceblue;
+  
+  }
+  
+  .dicas {
+    background-image: url(Design\ sem\ nome\ \(1\).png);
+  
+  }
+  
+  table {
+    border-collapse: collapse;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+  }
+  
+  .vazio {
+    background: #000;
+    color: aliceblue;
+  }
+  
+  td {
+    width: 30px;
+    height: 30px;
+    border: none;
+    text-align: center;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  input {
+    margin-bottom: 10px;
+    width: 30px;
+    height: 30px;
+    text-transform: uppercase;
+    text-align: center;
+  }

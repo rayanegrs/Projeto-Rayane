@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotina de Skincare</title>
+    <link rel="stylesheet" href="../css/rotinaTomdepele.css">
+</head>
+
+<body>
+
+    <header>
+
+
+        <nav>
+            <!-- <div class="inicio-cabeçalho"> -->
+
+            <!-- CRIANDO A NAVBAR -->
+            <a href="../index.html">HOME</a>
+            <a href="../pages/make.html">MAKE</a>
+            <a href="../pages/skincare.html">SKINCARE</a>
+            <a href="../pages/inspirações.html">INSPIRAÇÕES</a>
+
+        </nav>
+
+        <div class="botoes">
+            <a href="../pages/skincare.html">LOGOUT</a>
+        </div>
+
+    </header>
+
+    <h3> Veja uma rotina diaria prática de skincare adequada ao seu tipo de pele </h3><br>
+
+    <div class="pele">
+
+
+    <h2>Selecione o tipo de pele: </h2>
+    <select id="tipoPele" onchange="mostrarRotinaSkincare()">
+        <option value="mista">Mista</option>
+        <option value="oleosa">Oleosa</option>
+        <option value="normal">Normal</option>
+        <option value="seca">Seca</option>
+    </select><br>
+    </div>
+
+    <div class="lista" id="rotinaSkincare" style="display: none;">
+       <br> <h3>Rotina de Skincare:</h3><br>
+        <ul id="listaRotina"></ul>
+    </div>
+
+
+    <script>
+        function mostrarRotinaSkincare() {
+            var selectElement = document.getElementById('tipoPele');
+            var rotinaSkincareElement = document.getElementById('rotinaSkincare');
+            var listaRotinaElement = document.getElementById('listaRotina');
+
+            listaRotinaElement.innerHTML = ''; // Limpar conteúdo anterior
+
+            if (selectElement.value === 'mista') {
+                listaRotinaElement.innerHTML = `
+          <li>1-Limpeza com produtos suaves</li>
+          <li>2-Aplicação de tônico</li>
+          <li>3-Hidratação leve</li>
+          <li>4-Protetor solar com textura leve</li>
+        `;
+            } else if (selectElement.value === 'oleosa') {
+                listaRotinaElement.innerHTML = `
+          <li>1-Limpeza com produtos específicos para pele oleosa</li>
+          <li>2-Aplicação de tônico adstringente</li>
+          <li>3-Hidratação oil-free</li>
+          <li>4-Protetor solar com efeito matificante</li>
+        `;
+            } else if (selectElement.value === 'normal') {
+                listaRotinaElement.innerHTML = `
+          <li>1-Limpeza com produtos suaves</li>
+          <li>2-Aplicação de tônico suave</li>
+          <li>3-Hidratação equilibrada</li>
+          <li>4-Protetor solar de amplo espectro</li>
+        `;
+            } else if (selectElement.value === 'seca') {
+                listaRotinaElement.innerHTML = `
+          <li>1-Limpeza com produtos hidratantes</li>
+          <li>2-Aplicação de tônico hidratante</li>
+          <li>3-Hidratação intensa</li>
+          <li>4-Protetor solar com fator de hidratação</li>
+        `;
+            }
+
+            if (selectElement.value !== 'none') {
+                rotinaSkincareElement.style.display = 'block';
+            } else {
+                rotinaSkincareElement.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+
+</html>

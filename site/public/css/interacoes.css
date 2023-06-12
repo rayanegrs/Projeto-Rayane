@@ -1,0 +1,139 @@
+*{
+    margin: -3;
+    padding: 0%;
+}
+@font-face {
+    font-family: MinhaFonte;
+    src: url(LearningCurve.ttf);
+}
+
+body {
+    background-color:#000000;
+    overflow-x: hidden;
+    color: rgb(255, 255, 255);
+    background-image: url(../assets/img/background.png);
+    /* #212121 */
+
+}
+
+header {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 2%;
+    margin: 1%;
+
+}
+.cruzadinha {
+    width: 450px;
+    height: 350px;
+    border-radius: 20px;
+}
+
+.simule {
+    width: 450px;
+    height: 350px;
+    border-radius: 20px;
+}
+.cruzadinha:hover {
+    transform: scale(1.1);
+    transition: all ease-in-out 0.3s;
+}
+
+.simule:hover {
+    transform: scale(1.1);
+    transition: all ease-in-out 0.3s;
+}
+nav {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+}
+
+
+.botoes {
+    display: flex;
+    gap: 1rem;
+    align-items: end;
+    justify-content: flex-end;
+
+}
+.botoes a:hover{
+    color: rgb(255, 0, 0);
+    transition: 0.25s ease;
+}
+
+.botoes a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.imgInicial {
+
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0%;
+
+}
+.imgInicial h4 {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+    margin: 2%;
+
+
+}
+
+.imgInicial a {
+
+    text-decoration: none;
+    color: #ffffff;
+}
+.escolha{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    font-family: MinhaFonte;
+    margin: 0%;
+    padding: 0%;
+
+}
+
+/* .rodape {
+    padding: 50px;
+    height: 50px;
+    width: 100%;
+    background-color: #1a1a1a;
+    border-top: 4px beige;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.rodape a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.rodape a :hover {
+    color: rgb(158, 131, 163);
+    transition: 0.25s ease;
+} */

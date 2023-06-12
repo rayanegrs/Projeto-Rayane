@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+@font-face {
+    font-family: MinhaFonte;
+    src: url(LearningCurve.ttf);
+}
+
+body {
+    background-color: #000000;
+    overflow-x: hidden;
+    color: rgb(255, 255, 255);
+
+
+}
+
+header {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 2%;
+    margin: 1%;
+
+}
+
+.banner-img {
+    width: 100%;
+}
+
+.destaque-titulo {
+
+    display: flex;
+    padding: 0%;
+    margin: 1%;
+    color: #ffffff;
+    justify-content: center;
+}
+
+.imgInicial {
+
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2%;
+
+}
+
+.skincare-home {
+    width: 350px;
+    height: 420px;
+    border-radius: 6px;
+}
+
+.make-home {
+    width: 350px;
+    height: 420px;
+    border-radius: 6px;
+}
+
+.estilo-home {
+    width: 350px;
+    height: 420px;
+    border-radius: 6px;
+}
+
+/* ATRIBUIDO ZOOM NAS IMAGENS */
+.skincare-home:hover {
+    transform: scale(1.1);
+    transition: all ease-in-out 0.3s;
+}
+
+.make-home:hover {
+    transform: scale(1.1);
+    transition: all ease-in-out 0.3s;
+}
+
+.estilo-home:hover {
+    transform: scale(1.1);
+    transition: all ease-in-out 0.3s;
+}
+
+
+
+nav {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+
+}
+
+
+.botoes {
+    display: flex;
+    gap: 1rem;
+    align-items: end;
+    justify-content: flex-end;
+
+}
+
+.botoes a {
+    text-decoration: none;
+    color: #ffffff;
+}
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: MinhaFonte;
+    font-size: 60px;
+}
+.hello{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+/* parte dash */
+
+
+.Dash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130vh;
+    margin-top: 12vh;
+    transition: 0.5s;
+    border-radius: 4vh;
+    background-color: black;
+    padding: 2%;
+    margin: 3%;
+}
