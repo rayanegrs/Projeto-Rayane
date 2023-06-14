@@ -36,17 +36,18 @@
     <div class="pele">
 
 
-    <h2>Selecione o tipo de pele: </h2>
-    <select id="tipoPele" onchange="mostrarRotinaSkincare()">
-        <option value="mista">Mista</option>
-        <option value="oleosa">Oleosa</option>
-        <option value="normal">Normal</option>
-        <option value="seca">Seca</option>
-    </select><br>
+        <h2>Selecione o tipo de pele: </h2>
+        <select id="tipoPele" onchange="mostrarRotinaSkincare()">
+            <option value="mista">Mista</option>
+            <option value="oleosa">Oleosa</option>
+            <option value="normal">Normal</option>
+            <option value="seca">Seca</option>
+        </select><br>
     </div>
 
     <div class="lista" id="rotinaSkincare" style="display: none;">
-       <br> <h3>Rotina de Skincare:</h3><br>
+        <br>
+        <h3>Rotina de Skincare:</h3><br>
         <ul id="listaRotina"></ul>
     </div>
 
@@ -61,6 +62,12 @@
 
             if (selectElement.value === 'mista') {
                 listaRotinaElement.innerHTML = `
+
+                <p>A pele mista é aquela que não é oleosa nem seca. <br>
+                Sua principal característica é a oleosidade excessiva na <br>
+                zona T do rosto, que corresponde à testa, ao nariz e ao queixo<br><br>
+                Veja uma rotina diaria : <p><br>
+
           <li>1-Limpeza com produtos suaves</li>
           <li>2-Aplicação de tônico</li>
           <li>3-Hidratação leve</li>
@@ -68,13 +75,27 @@
         `;
             } else if (selectElement.value === 'oleosa') {
                 listaRotinaElement.innerHTML = `
+
+                <p> A pele oleosa possui características como o brilho intenso<BR>
+                     a sensação de pele pesada devido à produção em excesso de sebo<BR>
+                    poros dilatados, irregulares e a tendência à acne<br><br>
+                Veja uma rotina diaria : <p><br>
+
           <li>1-Limpeza com produtos específicos para pele oleosa</li>
           <li>2-Aplicação de tônico adstringente</li>
           <li>3-Hidratação oil-free</li>
           <li>4-Protetor solar com efeito matificante</li>
         `;
+
+
             } else if (selectElement.value === 'normal') {
                 listaRotinaElement.innerHTML = `
+
+                <p> A pele normal possui textura saudável e equilíbrio entre água <BR>
+                    e sebo, o ideal e saudável para a pele. Ou seja: produz gordura na<BR>
+                         quantidade certa, sem excesso de brilho ou de ressecamento<br><br>
+                Veja uma rotina diaria : <p><br>
+
           <li>1-Limpeza com produtos suaves</li>
           <li>2-Aplicação de tônico suave</li>
           <li>3-Hidratação equilibrada</li>
@@ -82,6 +103,12 @@
         `;
             } else if (selectElement.value === 'seca') {
                 listaRotinaElement.innerHTML = `
+                <p>A pele seca é uma pele que possui características muito específicas <BR>
+                    como descamação, coceira, aparência sem viço e luminosidade, aspecto esbranquiçado, <BR>
+                        sensação de repuxamento, ardor, sensibilidade, manchas vermelhas e textura escamosa<BR>
+                             podendo, nos casos mais graves, ter até feridas.<br><br>
+                Veja uma rotina diaria : <p><br>
+                    
           <li>1-Limpeza com produtos hidratantes</li>
           <li>2-Aplicação de tônico hidratante</li>
           <li>3-Hidratação intensa</li>

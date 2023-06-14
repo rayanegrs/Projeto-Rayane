@@ -30,61 +30,6 @@ header {
 
 }
 
-.banner-img {
-  width: 100%;
-}
-
-.destaque-titulo {
-
-  display: flex;
-  padding: 0%;
-  margin: 1%;
-  color: #ffffff;
-  justify-content: center;
-}
-
-.imgInicial {
-
-  display: flex;
-  justify-content: space-evenly;
-  padding: 2%;
-
-}
-
-.skincare-home {
-  width: 350px;
-  height: 420px;
-  border-radius: 6px;
-}
-
-.make-home {
-  width: 350px;
-  height: 420px;
-  border-radius: 6px;
-}
-
-.estilo-home {
-  width: 350px;
-  height: 420px;
-  border-radius: 6px;
-}
-
-/* ATRIBUIDO ZOOM NAS IMAGENS */
-.skincare-home:hover {
-  transform: scale(1.1);
-  transition: all ease-in-out 0.3s;
-}
-
-.make-home:hover {
-  transform: scale(1.1);
-  transition: all ease-in-out 0.3s;
-}
-
-.estilo-home:hover {
-  transform: scale(1.1);
-  transition: all ease-in-out 0.3s;
-}
-
 
 
 nav {

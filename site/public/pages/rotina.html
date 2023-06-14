@@ -54,29 +54,39 @@
     function verificar() {
         var dias = Number(qtdDias.value)
 
-        if (dias < 3) {
-            alert("é hora de cuidar um pouco mais da sua pele olhe a rotina mensal que preparamos para você ")
+        if (dias == "") {
+            alert("É necessário que preencha todos os campos")
+
         }
+        else {
 
-        var esfoliacao = 1;
-        var outrasAtividades = 'Lavar o rosto,passar hidratante, passar protetor solar'
 
-        for (var dia = 1; dia <= 30; dia++) {
-            var atividade;
-
-            if ((dia - 1) % dias === 0) {
-                atividade = 'Mascara facial hidratante';
-            }
-            else if ((dia - 1) % dias === 3) {
-                atividade = 'Esfoliação'
+            if (dias < 3) {
+                alert("é hora de cuidar um pouco mais da sua pele olhe a rotina mensal que preparamos para você ")
             }
 
-            else {
-                atividade = outrasAtividades;
+            var esfoliacao = 1;
+            var outrasAtividades = 'Lavar o rosto,passar hidratante, passar protetor solar'
+
+            for (var dia = 1; dia <= 30; dia++) {
+                var atividade;
+
+                if ((dia - 1) % dias === 0) {
+                    atividade = 'Mascara facial hidratante';
+                }
+                else if ((dia - 1) % dias === 3) {
+                    atividade = 'Esfoliação'
+                }
+
+                else {
+                    atividade = outrasAtividades;
+                }
+                exibir.innerHTML += `Dia ${dia} - ${atividade} <br> `
             }
-            exibir.innerHTML += `Dia ${dia} - ${atividade} <br> `
         }
     }
+
+
 
 
 

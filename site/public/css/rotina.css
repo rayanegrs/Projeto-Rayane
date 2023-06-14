@@ -13,7 +13,9 @@
     background-color: #000000;
     overflow-x: hidden;
     color: rgb(255, 255, 255);
-    background-image: url(../assets/img/background.png)
+    margin: -3%;
+    padding: 2%;
+    background-image: url(../assets/img/background.png);
   
   
   }
